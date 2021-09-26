@@ -24,7 +24,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://example.com/images/bitbug_favicon.ico">
 <meta property="article:published_time" content="2021-09-21T02:10:45.000Z">
-<meta property="article:modified_time" content="2021-09-26T09:19:15.423Z">
+<meta property="article:modified_time" content="2021-09-26T09:22:30.343Z">
 <meta property="article:author" content="Litter Yu">
 <meta property="article:tag" content="博客">
 <meta property="article:tag" content="计算机基础">
@@ -184,16 +184,16 @@
         </header>
         <div class="kratos-post-content">
             <div id="expire-alert" class="alert alert-warning hidden" role="alert">
-                本文最后编辑于 <time datetime="1632647955423"></time> 前，其中的内容可能需要更新。
+                本文最后编辑于 <time datetime="1632648150343"></time> 前，其中的内容可能需要更新。
             </div>
             
             <hr />
             <h2 id="计算机组成原理1-0：数值数据在计算机中的表示"><a href="#计算机组成原理1-0：数值数据在计算机中的表示" class="headerlink" title="计算机组成原理1-0：数值数据在计算机中的表示"></a>计算机组成原理1-0：数值数据在计算机中的表示</h2><p>计算机存储信息时，通常先将信息转换成数字进行存储，处于运算效率与存储空间的限制，通常转换成不同的编码（数据存储的形式）进行存储。</p>
 <span id="more"></span>
 
-<h3 id="知识要点："><a href="#知识要点：" class="headerlink" title="知识要点："></a>知识要点：</h3><p><img src="https://img-blog.csdnimg.cn/20210321155633895.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl81MDk1OTM1MQ==,size_16,color_FFFFFF,t_70" alt="图1-1知识框架"></p>
+<h3 id="知识要点："><a href="#知识要点：" class="headerlink" title="知识要点："></a>知识要点：</h3><p><img src="https://img-blog.csdnimg.cn/20210321155633895.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl81MDk1OTM1MQ==,size_16,color_FFFFFF,t_70" alt="图1知识框架"></p>
 <h3 id="前言："><a href="#前言：" class="headerlink" title="前言："></a>前言：</h3><p>计算机存储信息时，通常先将信息转换成数字进行存储，处于运算效率与存储空间的限制，通常转换成不同的编码（数据存储的形式）进行存储。</p>
-<p><img src="https://img-blog.csdnimg.cn/20210321160033422.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl81MDk1OTM1MQ==,size_16,color_FFFFFF,t_70" alt="图1-2存储数据的分类"></p>
+<p><img src="https://img-blog.csdnimg.cn/20210321160033422.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl81MDk1OTM1MQ==,size_16,color_FFFFFF,t_70" alt="图2存储数据的分类"></p>
 <p>接下来是对上述几种不同编码介绍：</p>
 <p>注意：在计算机存储时通常采用二进制，所以以上几种编码都是采用二进制的形式。</p>
 <h4 id="相关概念："><a href="#相关概念：" class="headerlink" title="相关概念："></a>相关概念：</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">**无符号数：** 没有正负号的（二进制）数据即为无符号数，例如：</span><br><span class="line"></span><br><span class="line">					N1001 = 5&lt;sub&gt;（10）&lt;/sub&gt;</span><br><span class="line"></span><br><span class="line">					N0111 = 7&lt;sub&gt;（10）&lt;/sub&gt;</span><br><span class="line"></span><br><span class="line">					无符号数由于没有正负号之分，所以一般情况下都只能表示正数，若有n位存储空间，其取值范围为：0~2&lt;sup&gt;(n-1)&lt;/sup&gt;；并且使用范围不广，一般运算时使用与之相对应的带符号数。</span><br><span class="line"></span><br><span class="line">**带符号数**：与无符号数相反，带有正负号的数据成为带符号数，带符号数的适用范围较无符号数广，又可以将其分为原码、补码和反码三种编码。</span><br></pre></td></tr></table></figure>
@@ -202,7 +202,7 @@
 
 <h3 id="原码，反码，补码和移码"><a href="#原码，反码，补码和移码" class="headerlink" title="原码，反码，补码和移码"></a>原码，反码，补码和移码</h3><h4 id="原码表示法："><a href="#原码表示法：" class="headerlink" title="原码表示法："></a>原码表示法：</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">将无符号的二进制数加上符号即为原码形式，但是在计算机中只能存储1或0，所以我们用“0”表示正号，		用“1”表示负号，并放在数值的最前面。（符号位与后面数值之间在书写时习惯加上“.”或“,”）</span><br><span class="line"></span><br><span class="line">若有8位存储空间：</span><br><span class="line"></span><br><span class="line">-1 = 1，0000001				+3 = 0，0000011 </span><br></pre></td></tr></table></figure>
 
-<p><img src="./images/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%861-0%EF%BC%9A%E6%95%B0%E5%80%BC%E6%95%B0%E6%8D%AE%E5%9C%A8%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%AD%E7%9A%84%E8%A1%A8%E7%A4%BA/%E5%8E%9F%E7%A0%81%E8%A1%A8%E7%A4%BA%E6%B3%95.png" alt="2021032116075843"></p>
+<p><img src="./images/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%861-0%EF%BC%9A%E6%95%B0%E5%80%BC%E6%95%B0%E6%8D%AE%E5%9C%A8%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%AD%E7%9A%84%E8%A1%A8%E7%A4%BA/%E5%8E%9F%E7%A0%81%E8%A1%A8%E7%A4%BA%E6%B3%95.png" alt="图3 原码表示法"></p>
 <p>&emsp;在符号位与数值位之间，或者数值位末尾有隐含的小数点“.”，不占有计算机的存储空间。<br>&emsp;原码表示数据时清晰易懂，在数据转换时很容易，并且原码能够容易的实现乘除运算；但是在使用原码作    加减运算时较为复杂，所以引出了另外的一种编码——补码。</p>
 <p>原码表示中， [+0]<sub>原</sub> = 00000  &emsp;     [-0]<sub>原</sub> = 10000</p>
 <h4 id="补码表示法："><a href="#补码表示法：" class="headerlink" title="补码表示法："></a>补码表示法：</h4><p>（<sup>①</sup>前半部分仅介绍了补码的两个相关概念和补码的作用，可以略读）</p>
@@ -215,21 +215,21 @@
 <p>&emsp;由此可得：我们只要知道一个“钟表”的模，如果想将其逆时针旋转一定刻度（减去一段刻度 a）到达某个时    间点，也能通过顺时针旋转（加上一段刻度 b）某段距离来达到相同的目的。我们称 b 是 a 的补数。类似在计    算机中，我们需要两个数作减法运算，也可以通过找减数的补数来换算成加法运算，在计算机中，我们称其为    <strong>补码</strong>。</p>
 <p><em><strong>计算机中的补码</strong></em>：</p>
 <p>&emsp;在计算机中，由于使用的是二进制形式，所以当真值为纯小数或纯整数时有如下公式：</p>
-<p><img src="https://img-blog.csdnimg.cn/20210324174246359.png" alt="图1-5补码定义（真值为纯整数）"></p>
+<p><img src="https://img-blog.csdnimg.cn/20210324174246359.png" alt="图4补码定义（真值为纯整数）"></p>
 <p>&emsp;由于二进制的特殊性，我们在计算补码时只需要通过如下规律即可：</p>
 <p>&emsp;X 为正数时， [X]<sub>补</sub> = [X]<sub>原</sub> = X</p>
 <p>&emsp;X 为负数时，X<sub>补</sub> = [X]<sub>原</sub> 两端的1 保持不变，中间所夹的所有数按位取反（0变1，1变0）。</p>
 <p>​    [X] = 0011 时，      [X]<sub>原</sub> = 0011 &emsp;   X<sub>补</sub> = 0011；</p>
 <p>​    [X] = -0001 时，   [X]<sub>原</sub>= 1001  &emsp;    X<sub>补</sub>= 1111；</p>
 <p>​    补码表示中，[+0]补 = [-0]补 = 00000</p>
-<h4 id="反码表示法"><a href="#反码表示法" class="headerlink" title="反码表示法"></a>反码表示法</h4><p><img src="./images/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%861-0%EF%BC%9A%E6%95%B0%E5%80%BC%E6%95%B0%E6%8D%AE%E5%9C%A8%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%AD%E7%9A%84%E8%A1%A8%E7%A4%BA/%E5%8F%8D%E7%A0%81%E8%A1%A8%E7%A4%BA%E6%B3%95.png" alt="20210324174219980"></p>
+<h4 id="反码表示法"><a href="#反码表示法" class="headerlink" title="反码表示法"></a>反码表示法</h4><p><img src="./images/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%861-0%EF%BC%9A%E6%95%B0%E5%80%BC%E6%95%B0%E6%8D%AE%E5%9C%A8%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%AD%E7%9A%84%E8%A1%A8%E7%A4%BA/%E5%8F%8D%E7%A0%81%E8%A1%A8%E7%A4%BA%E6%B3%95.png" alt="图5 反码表示法公式"></p>
 <p>​        有时也可以直接用原码得到：（大部分使用此方法求反码）        正数求反码：[X]<sub>原</sub> = [X]<sub>反</sub>                &emsp;&emsp;[X]<sub>原</sub> = 0101 &emsp;     [X]<sub>反</sub> = 0101        负数求反码：将原码除符号位外所有的数都按位求反即得到反码：                [X]<sub>原</sub> = 1011     [X]<sub>反</sub> = 1100        反码表示中，[+0]<sub>反</sub>= 00000     [-0]<sub>反</sub> = 11111 </p>
 <p>用时也可以直接用原码得到：（大部分使用此方法求反码）        </p>
 <p>正数求反码：[X]<sub>原</sub> = [X]<sub>反</sub>                &emsp;&emsp;[X]<sub>原</sub> = 0101 &emsp;     [X]<sub>反</sub> = 0101        </p>
 <p>负数求反码：将原码除符号位外所有的数都按位求反即得到反码：            </p>
 <p>​    [X]<sub>原</sub> = 1011     [X]<sub>反</sub> = 1100        反码表示中，[+0]<sub>反</sub>= 00000     [-0]<sub>反</sub> = 11111 </p>
 <h4 id="移码表示法："><a href="#移码表示法：" class="headerlink" title="移码表示法："></a>移码表示法：</h4><p>&emsp;移码主要进行浮点数的存储时使用，（可以先掠过，后面看到浮点数时在反过来看）。<br>&emsp;在原码的基础上个加上一个常数，得到的一个新的编码，称为移码，这个常数我们称为“<em><strong>偏置值</strong></em> ”。</p>
-<p>移码举例（<em><strong>为了便于理解计算，此处的偏移量设为“1”，在实际操作中一般为2<sup>n</sup>-1</strong></em>）。<br><img src="https://img-blog.csdnimg.cn/20210321164528138.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl81MDk1OTM1MQ==,size_16,color_FFFFFF,t_70" alt="图1-7移码举例（此处的偏移量为“1”，在实际操作中一般为2&lt;sup&gt;n&lt;/sup&gt;-1"></p>
+<p>移码举例（<em><strong>为了便于理解计算，此处的偏移量设为“1”，在实际操作中一般为2<sup>n</sup>-1</strong></em>）。<br><img src="https://img-blog.csdnimg.cn/20210321164528138.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl81MDk1OTM1MQ==,size_16,color_FFFFFF,t_70" alt="图6移码举例（此处的偏移量为“1”，在实际操作中一般为2&lt;sup&gt;n&lt;/sup&gt;-1"></p>
 <h4 id="几种机器数之间的相互转换："><a href="#几种机器数之间的相互转换：" class="headerlink" title="几种机器数之间的相互转换："></a>几种机器数之间的相互转换：</h4><p><sup>表1-1 机器数的相互转换:</sup></p>
 <table>
 <thead>
@@ -247,7 +247,7 @@
 </tbody></table>
 <h3 id="机器数的定点表示与浮点表示"><a href="#机器数的定点表示与浮点表示" class="headerlink" title="机器数的定点表示与浮点表示"></a>机器数的定点表示与浮点表示</h3><p>&emsp;<strong>由于计算机存储时并不会存储小数点，并且在小数点所在的位置是不一定的，所以根据小数点是否是固定的，将数据分为“定点表示”和“浮点表示”。</strong><br>&emsp;定点数又分为定点整数和定点小数。</p>
 <h4 id="定点表示法："><a href="#定点表示法：" class="headerlink" title="定点表示法："></a>定点表示法：</h4><p>&emsp;所有数据的小数点位置固定不变的一组（或者一类）存储方式存储的数称为定点数。一般小数点固定在数位的最前面（只能表示整数）或者最末尾（只能表示纯小数）。</p>
-<h5 id="定点小数："><a href="#定点小数：" class="headerlink" title="定点小数："></a>定点小数：</h5><p>&emsp;定点小数表示的是纯小数。<br>&emsp;小数点的位置固定在最高位有效位之前，符号位之后，小数点的位置是隐含的，不占用存储空间。<br><img src="https://img-blog.csdnimg.cn/20210323211131914.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl81MDk1OTM1MQ==,size_16,color_FFFFFF,t_70" alt="图1-8定点小数在计算机中的表示"></p>
+<h5 id="定点小数："><a href="#定点小数：" class="headerlink" title="定点小数："></a>定点小数：</h5><p>&emsp;定点小数表示的是纯小数。<br>&emsp;小数点的位置固定在最高位有效位之前，符号位之后，小数点的位置是隐含的，不占用存储空间。<br><img src="https://img-blog.csdnimg.cn/20210323211131914.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl81MDk1OTM1MQ==,size_16,color_FFFFFF,t_70" alt="图7"></p>
 <p>特殊值：</p>
 <p><sup>表1-2 定点小数的特殊值:</sup></p>
 <table>
@@ -311,7 +311,7 @@
 <td></td>
 </tr>
 <tr>
-<td><img src="https://img-blog.csdnimg.cn/20210323213155283.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl81MDk1OTM1MQ==,size_16,color_FFFFFF,t_70" alt="图1-9 定点整数在计算机中的表示"></td>
+<td><img src="https://img-blog.csdnimg.cn/20210323213155283.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl81MDk1OTM1MQ==,size_16,color_FFFFFF,t_70" alt="图8 定点整数在计算机中的表示"></td>
 <td></td>
 <td></td>
 </tr>
@@ -338,7 +338,7 @@
 </tr>
 </tbody></table>
 <h4 id="浮点表示法："><a href="#浮点表示法：" class="headerlink" title="浮点表示法："></a>浮点表示法：</h4><p>&emsp;通过上文，我们知道了两种定点数及其表示范围，但是在实际应用中这两种数字类型不能满足现实需求。如果能在计算机中让小数点随意移动，就能更灵活的存储各种不同长度的数据。于是我们发明了类似于此种存储方式的“<strong>浮点表示法</strong>”。<br>&emsp;我们在小学时学过用科学计数法来表示数字，比如<br>&emsp;&emsp;&emsp;&emsp;&emsp;12000000 = 1.2×10<sup>7</sup><br>或&emsp;&emsp;&emsp;&emsp;0.0000056 = 5.6×10<sup>-6</sup><br>类似的，将前面的数（1.2或5.6）改为二进制的表示形式，后面的位权换为2，有：<br>&emsp;&emsp;&emsp;&emsp;&emsp;N = M·r<sup> E</sup><br>&emsp;我们称 M 为尾数，E为阶码，r 通常取2.其中尾数为纯小数，阶码为整数。<br><br><br>&emsp;在存储该数据的时候，只需要将M和E存入计算机中计科。<br>&emsp;其中存储的方式有很多，并且由于计算机中存储的是二进制，所以我们要将M和E转化为机器数（原、反、补、移码）存入其中，具体用哪种编码形式根据题目要求判断。<br><br><br>这里介绍两种典型的存储方式：一般格式和规格化IEEE754存储格式。 </p>
-<h5 id="浮点数的一般格式"><a href="#浮点数的一般格式" class="headerlink" title="浮点数的一般格式"></a>浮点数的一般格式</h5><p><img src="https://img-blog.csdnimg.cn/20210324125404880.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl81MDk1OTM1MQ==,size_16,color_FFFFFF,t_70" alt="图1-10 浮点数的一般格式"><br>其中，e<sub>s</sub>和e为阶码符号位和数值部分；m<sub>s</sub>和m为尾数符号位和数值部分。阶码和尾数都用补码表示。<br>表示范围：</p>
+<h5 id="浮点数的一般格式"><a href="#浮点数的一般格式" class="headerlink" title="浮点数的一般格式"></a>浮点数的一般格式</h5><p><img src="https://img-blog.csdnimg.cn/20210324125404880.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl81MDk1OTM1MQ==,size_16,color_FFFFFF,t_70" alt="图9 浮点数的一般格式"><br>其中，e<sub>s</sub>和e为阶码符号位和数值部分；m<sub>s</sub>和m为尾数符号位和数值部分。阶码和尾数都用补码表示。<br>表示范围：</p>
 <p><sup>表1-6 浮点数的表示范围:</sup></p>
 <table>
 <thead>
@@ -389,7 +389,7 @@
 <p>&emsp;<strong>1）规格化浮点数</strong><br>&emsp;我们在学习科学计数法时有一个规定：<br>&emsp;如 a×10<sup>n</sup> ; 其中要求:<br>&emsp;&emsp; 1 ≤ a ≤ 10<br>&emsp;类似的，在浮点数的存储中，也有相似的规定：<br>&emsp;对于浮点数:<br>&emsp;&emsp;N = M × r<sup> E</sup><br>&emsp;&emsp;有： 1/r ≤ M &lt; 1<br>&emsp;例如：对于浮点数：1,0001 1011 可以写成：<br>&emsp;0.1011×2<sup>-2</sup>；&emsp; 1.011×2<sup>-4</sup>;&emsp; 10.11×2<sup>-4</sup><br>&emsp;其中只有0.1011×2<sup>-2</sup>是规格化形式。</p>
 <p>&emsp;<strong>2）阶码的移码表示法</strong><br>&emsp;关于移码的知识点上文已经提及到了，这里主要讲解如何计算移码。<br>&emsp;a.已知原码求阶码，用原码加上阶码；<br>&emsp;b.已知阶码求原码，用阶码减去偏移量。<br>&emsp;对于偏移量，在IEEE754中（二进制）是由n-1个1构成（n表示阶码占有的位数）。具体的偏移量可以参考下面的表格。</p>
 <p><strong>IEEE754标准浮点数：</strong></p>
-<p>&emsp;在原有的学习中，规定一类新的浮点数存储格式，为：<br><img src="https://img-blog.csdnimg.cn/20210324163344560.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl81MDk1OTM1MQ==,size_16,color_FFFFFF,t_70" alt="图1-11 IEEE754标准格式"><br>称用此种形式存储浮点数的格式为<strong>IEEE754标准浮点数</strong>。<br>根据计算机提供的存储位数不同，其中的E和m的占用空间也不同，由此分为三类：<br><img src="https://img-blog.csdnimg.cn/20210324164619252.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl81MDk1OTM1MQ==,size_16,color_FFFFFF,t_70" alt="IEEE754格式"><br>&emsp;在计算机存储尾数时，使用规格化之后的格式，故尾数数值第一位总为1，为了节约存储空间，提高存储精度，在存入计算机时，常将这个1 省略。例如：<br>&emsp;存入13时:<br>&emsp; (13)<sub>10</sub> = (1101)<sub>2</sub> = 1.101× 2 <sub>3</sub><br>&emsp;其中整数位上的1 省略只存入 101 。</p>
+<p>&emsp;在原有的学习中，规定一类新的浮点数存储格式，为：<br><img src="https://img-blog.csdnimg.cn/20210324163344560.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl81MDk1OTM1MQ==,size_16,color_FFFFFF,t_70" alt="图10 IEEE754标准格式"><br>称用此种形式存储浮点数的格式为<strong>IEEE754标准浮点数</strong>。<br>根据计算机提供的存储位数不同，其中的E和m的占用空间也不同，由此分为三类：<br><img src="https://img-blog.csdnimg.cn/20210324164619252.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl81MDk1OTM1MQ==,size_16,color_FFFFFF,t_70" alt="IEEE754格式"><br>&emsp;在计算机存储尾数时，使用规格化之后的格式，故尾数数值第一位总为1，为了节约存储空间，提高存储精度，在存入计算机时，常将这个1 省略。例如：<br>&emsp;存入13时:<br>&emsp; (13)<sub>10</sub> = (1101)<sub>2</sub> = 1.101× 2 <sub>3</sub><br>&emsp;其中整数位上的1 省略只存入 101 。</p>
 <p><strong>例题<sup>②</sup>：</strong></p>
 <p>1-1 将(100.0 25)<sub>10</sub>转换成短浮点数格式。</p>
 <p>&emsp; ①把十进制数转换成二进制数。<br>&emsp;&emsp;(100. 2)<sub>10</sub>-=(00100.0)<sub>2</sub></p>
