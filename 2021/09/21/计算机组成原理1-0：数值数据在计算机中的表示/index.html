@@ -24,7 +24,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://example.com/images/bitbug_favicon.ico">
 <meta property="article:published_time" content="2021-09-21T02:10:45.000Z">
-<meta property="article:modified_time" content="2021-09-26T09:12:58.054Z">
+<meta property="article:modified_time" content="2021-09-26T09:19:15.423Z">
 <meta property="article:author" content="Litter Yu">
 <meta property="article:tag" content="博客">
 <meta property="article:tag" content="计算机基础">
@@ -184,7 +184,7 @@
         </header>
         <div class="kratos-post-content">
             <div id="expire-alert" class="alert alert-warning hidden" role="alert">
-                本文最后编辑于 <time datetime="1632647578054"></time> 前，其中的内容可能需要更新。
+                本文最后编辑于 <time datetime="1632647955423"></time> 前，其中的内容可能需要更新。
             </div>
             
             <hr />
@@ -202,7 +202,7 @@
 
 <h3 id="原码，反码，补码和移码"><a href="#原码，反码，补码和移码" class="headerlink" title="原码，反码，补码和移码"></a>原码，反码，补码和移码</h3><h4 id="原码表示法："><a href="#原码表示法：" class="headerlink" title="原码表示法："></a>原码表示法：</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">将无符号的二进制数加上符号即为原码形式，但是在计算机中只能存储1或0，所以我们用“0”表示正号，		用“1”表示负号，并放在数值的最前面。（符号位与后面数值之间在书写时习惯加上“.”或“,”）</span><br><span class="line"></span><br><span class="line">若有8位存储空间：</span><br><span class="line"></span><br><span class="line">-1 = 1，0000001				+3 = 0，0000011 </span><br></pre></td></tr></table></figure>
 
-<p><img src="/images/2021032116075843.png" alt="2021032116075843"></p>
+<p><img src="./images/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%861-0%EF%BC%9A%E6%95%B0%E5%80%BC%E6%95%B0%E6%8D%AE%E5%9C%A8%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%AD%E7%9A%84%E8%A1%A8%E7%A4%BA/%E5%8E%9F%E7%A0%81%E8%A1%A8%E7%A4%BA%E6%B3%95.png" alt="2021032116075843"></p>
 <p>&emsp;在符号位与数值位之间，或者数值位末尾有隐含的小数点“.”，不占有计算机的存储空间。<br>&emsp;原码表示数据时清晰易懂，在数据转换时很容易，并且原码能够容易的实现乘除运算；但是在使用原码作    加减运算时较为复杂，所以引出了另外的一种编码——补码。</p>
 <p>原码表示中， [+0]<sub>原</sub> = 00000  &emsp;     [-0]<sub>原</sub> = 10000</p>
 <h4 id="补码表示法："><a href="#补码表示法：" class="headerlink" title="补码表示法："></a>补码表示法：</h4><p>（<sup>①</sup>前半部分仅介绍了补码的两个相关概念和补码的作用，可以略读）</p>
@@ -222,7 +222,7 @@
 <p>​    [X] = 0011 时，      [X]<sub>原</sub> = 0011 &emsp;   X<sub>补</sub> = 0011；</p>
 <p>​    [X] = -0001 时，   [X]<sub>原</sub>= 1001  &emsp;    X<sub>补</sub>= 1111；</p>
 <p>​    补码表示中，[+0]补 = [-0]补 = 00000</p>
-<h4 id="反码表示法"><a href="#反码表示法" class="headerlink" title="反码表示法"></a>反码表示法</h4><p><img src="/images/20210324174219980.png" alt="20210324174219980"></p>
+<h4 id="反码表示法"><a href="#反码表示法" class="headerlink" title="反码表示法"></a>反码表示法</h4><p><img src="./images/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%861-0%EF%BC%9A%E6%95%B0%E5%80%BC%E6%95%B0%E6%8D%AE%E5%9C%A8%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%AD%E7%9A%84%E8%A1%A8%E7%A4%BA/%E5%8F%8D%E7%A0%81%E8%A1%A8%E7%A4%BA%E6%B3%95.png" alt="20210324174219980"></p>
 <p>​        有时也可以直接用原码得到：（大部分使用此方法求反码）        正数求反码：[X]<sub>原</sub> = [X]<sub>反</sub>                &emsp;&emsp;[X]<sub>原</sub> = 0101 &emsp;     [X]<sub>反</sub> = 0101        负数求反码：将原码除符号位外所有的数都按位求反即得到反码：                [X]<sub>原</sub> = 1011     [X]<sub>反</sub> = 1100        反码表示中，[+0]<sub>反</sub>= 00000     [-0]<sub>反</sub> = 11111 </p>
 <p>用时也可以直接用原码得到：（大部分使用此方法求反码）        </p>
 <p>正数求反码：[X]<sub>原</sub> = [X]<sub>反</sub>                &emsp;&emsp;[X]<sub>原</sub> = 0101 &emsp;     [X]<sub>反</sub> = 0101        </p>
